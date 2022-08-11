@@ -1,5 +1,13 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  let map = new Map();
+  for(let i=0; i<array.length; i++){
+    if(map.has(target-array[i])){
+      return true;
+    }else{
+      map.set(array[i],i);
+    }
+  }
+  return false;
 }
 
 /* 
